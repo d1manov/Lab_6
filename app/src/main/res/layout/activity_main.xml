@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275">
+
+        <Button
+            android:id="@+id/sedan_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="Седаны"/>
+
+        <Button
+            android:id="@+id/crossover_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Кроссоверы" />
+
+        <Button
+            android:id="@+id/SUV_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Внедорожники"
+            android:textSize="11dp"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/sedan_data"
+        android:layout_width="127dp"
+        android:layout_height="739dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_layout"
+        tools:ignore="MissingConstraints" />
+
+    <ListView
+        android:id="@+id/crossover_data"
+        android:layout_width="127dp"
+        android:layout_height="739dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/SUV_data"
+        app:layout_constraintStart_toEndOf="@+id/sedan_data"
+        app:layout_constraintTop_toBottomOf="@+id/main_layout"
+        tools:ignore="MissingConstraints" />
+
+    <ListView
+        android:id="@+id/SUV_data"
+        android:layout_width="127dp"
+        android:layout_height="739dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_layout"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
